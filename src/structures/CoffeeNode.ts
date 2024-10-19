@@ -354,7 +354,7 @@ export class CoffeeNode<T = unknown> extends TypedEmitter<NodeEvents> {
         this.emit("event", payload)
         break
       default:
-        this.error(new Error(`Unexpected op '${payload.op}' with data: ${d.toString()}`))
+        console.error(`Unexpected op '${payload.op}' with data: ${d.toString()}`);
     }
   }
 }
